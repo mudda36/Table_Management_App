@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "generate-data": "node scripts/convert-csv-to-json.js",
+    "serve-api": "json-server db.json --port 3001 --middlewares json-server-middleware.js",
+    "dev": "concurrently \"npm run serve-api\" \"npm start\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
