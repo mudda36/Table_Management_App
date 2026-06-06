@@ -1,0 +1,4 @@
+**/*.test.tsx
+**/*.test.ts
+src/**/*.test.tsx
+src/**/*.test.ts

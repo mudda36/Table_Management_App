@@ -28,13 +28,14 @@
     "json-server": "^0.17.4",
     "typescript": "^4.9.5"
   },
-  "scripts": {
+ "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false react-scripts build",
     "test": "echo \"No tests specified\"",
     "eject": "react-scripts eject",
     "generate-data": "node scripts/convert-csv-to-json.js",
-    "serve-api": "json-server db.json --port 3001"
+    "serve-api": "json-server db.json --port 3001",
+    "vercel-build": "CI=false npm run build"
   },
   "eslintConfig": {
     "extends": [

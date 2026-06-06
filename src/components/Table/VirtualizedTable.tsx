@@ -1,5 +1,5 @@
 // import React, { useMemo, useRef, useEffect } from 'react';
-import React, { useMemo, useCallback, useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { Track, ColumnConfig } from '../../types';
 import './VirtualizedTable.css';
