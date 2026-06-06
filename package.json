@@ -2,7 +2,10 @@
   "name": "spotify-table-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "engines": {
+    "node": "24.x",
+    "npm": "10.x"
+  },
   "dependencies": {
     "@tanstack/react-table": "^8.10.7",
     "@tanstack/react-virtual": "^3.0.1",
@@ -26,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=true react-scripts build",
+    "build": "react-scripts build",
     "test": "echo \"No tests specified\"",
     "eject": "react-scripts eject",
     "generate-data": "node scripts/convert-csv-to-json.js",
@@ -48,9 +51,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": "18.x",
-    "npm": "9.x"
   }
 }
