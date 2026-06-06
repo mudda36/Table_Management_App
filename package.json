@@ -1,10 +1,11 @@
 {
-  "name": "spotify-table-app",
+ "name": "spotify-table-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "engines": {
-    "node": "24.x",
-    "npm": "10.x"
+    "node": "20.x",
+    "npm": "9.x"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.10.7",
