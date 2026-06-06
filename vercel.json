@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "CI": "false",
+    "SKIP_PREFLIGHT_CHECK": "true"
+  },
+  "buildCommand": "CI=false npm run build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "create-react-app",
+  "outputDirectory": "build",
+  "devCommand": "npm start"
+}
