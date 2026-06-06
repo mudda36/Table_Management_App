@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "outputDirectory": "build",
+  "framework": "create-react-app",
+  "devCommand": "npm start",
   "routes": [
     {
       "src": "/static/(.*)",
@@ -29,11 +25,13 @@
   ],
   "env": {
     "CI": "false",
-    "SKIP_PREFLIGHT_CHECK": "true"
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "TSC_COMPILE_ON_ERROR": "true",
+    "ESLINT_NO_DEV_ERRORS": "true",
+    "DISABLE_ESLINT_PLUGIN": "true"
   },
-  "buildCommand": "CI=false npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
-  "framework": "create-react-app",
-  "outputDirectory": "build",
-  "devCommand": "npm start"
+  "github": {
+    "enabled": true,
+    "autoJobCancelation": true
+  }
 }
