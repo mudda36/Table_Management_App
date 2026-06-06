@@ -19,6 +19,10 @@
       "dest": "/favicon.ico"
     },
     {
+      "src": "/(.*)\\.(js|css|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$",
+      "dest": "/$1.$2"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
@@ -32,6 +36,7 @@
   },
   "github": {
     "enabled": true,
-    "autoJobCancelation": true
+    "autoJobCancelation": true,
+    "silent": false
   }
 }

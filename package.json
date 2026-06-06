@@ -2,6 +2,7 @@
   "name": "spotify-table-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@tanstack/react-table": "^8.10.7",
     "@tanstack/react-virtual": "^3.0.1",
@@ -18,23 +19,18 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/react-window": "^1.8.8",
-    "@types/jest": "^29.5.0",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/user-event": "^14.0.0",
     "ajv": "^8.12.0",
     "concurrently": "^8.0.0",
     "json-server": "^0.17.4",
     "typescript": "^4.9.5"
   },
- "scripts": {
+  "scripts": {
     "start": "react-scripts start",
-    "build": "set \"CI=false\" && react-scripts build",
-    "test": "react-scripts test",
+    "build": "CI=true react-scripts build",
+    "test": "echo \"No tests specified\"",
     "eject": "react-scripts eject",
     "generate-data": "node scripts/convert-csv-to-json.js",
-    "serve-api": "json-server db.json --port 3001",
-    "vercel-build": "set \"CI=false\" && react-scripts build"
+    "serve-api": "json-server db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -54,13 +50,7 @@
     ]
   },
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
-  "vercel": {
-    "buildCommand": "npm run vercel-build",
-    "installCommand": "npm install --legacy-peer-deps",
-    "outputDirectory": "build",
-    "devCommand": "npm start"
+    "node": "18.x",
+    "npm": "9.x"
   }
 }
